@@ -30,6 +30,13 @@ body {
     border-radius: 10px;
 }
 
+.background-white-big {
+    background-color: white;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+
 .button-style {
     color: rgb(185,20,80);
     background-color: lightgray;
