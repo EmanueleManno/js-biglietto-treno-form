@@ -20,29 +20,38 @@
 </head>
 
 <body>
+    <div class="background-pink">
 
-    <!--Titolo della prima parte in alto-->
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <div>
-        <div>
-            Nome e cognome
-            <input type="text" id="first-name">
-            KM da percorrere
-            <input type="number" id="kilometers">
-            Età
-            <input type="text" id="my-age">
+        <!--Titolo della prima parte in alto-->
+        <h2 class="text-white text-center py-2">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+
+        <!--Box del calcolo-->
+        <div class="background-white container text-center py-3">
+            <span class="p-2">Nome e cognome
+            <input type="text" id="first-name"></span>
+            <span class="p-2">KM da percorrere
+            <input type="number" id="kilometers"></span>
+            <span class="p-2">Età
+            <input type="text" id="my-age"></span>
+            <div class="p-2">
+            <button class="button-style btn-lg" id="button">Calcola</button></div>
         </div>
-        <button id="button">Calcola</button>
-    </div>
 
-    <!--Titolo della parte in basso del biglietto generato-->
-    <h2>IL TUO BIGLIETTO</h2>
-    <div>
-        <div>
-            <p id="your-name"></p>
-            <p id="discount"></p>
-            <p id="total"></p>
-            <p id="discount-price"></p>
+        <!--Titolo della parte in basso del biglietto generato-->
+        <h2 class="text-white text-center py-2">IL TUO BIGLIETTO</h2>
+
+        <!--Box del biglietto-->
+        <div class="background-white container py-3">
+            <div class="col-6 p-2">
+                <p id="your-name"></p>
+                <p id="discount"></p>
+                <p id="total"></p>
+                <p id="discount-price"></p>
+            </div>
+            <div class="col-6">
+                <p id="carriage-number"></p>
+                <p id="ticket-number"></p>
+            </div>
         </div>
     </div>
 

@@ -15,3 +15,22 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     }
+
+/*BACKGROUND*/
+.background-pink {
+    background-color: rgb(185,20,80);
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-white {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.button-style {
+    color: rgb(185,20,80);
+    background-color: lightgray;
+}
