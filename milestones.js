@@ -69,11 +69,13 @@ totalElement.innerText = priceMessage + basePrice.toFixed(2);
 }
 
 //GENERO IL NUMERO DI CARROZZA
+const randomCarriage = Math.random ();
 const maxCarriage = 20;
-carriageResult = Math.floor(random * maxCarriage)
+carriageResult = Math.floor(randomCarriage * maxCarriage)
 //GENERO IL NUMERO DI BIGLIETTO 
+const randomTicket = Math.random ();
 const maxTicket = 99999;
-ticketResult = Math.floor(random * maxTicket)
+ticketResult = Math.floor(randomTicket * maxTicket)
 
 //INSERISCO IL NUMERO DI CARROZZA GENERATO NELL'ELEMENTO IN PAGINA
 carriageNumber.innerText = carriageMessage + carriageResult;
