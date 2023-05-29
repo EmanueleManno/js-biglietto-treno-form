@@ -1,11 +1,27 @@
+/*MILESTONE 1*/
+
 //TEST PER VEDERE SE FUNZIONA
 console.log('JS OK');
+
+//RECUPERO IL BOTTONE
+const button = document.getElementById('button');
+
+//RECUPERO IL NOME, I CHILOMETRI E L'ETA'
+const nameInput = document.getElementById('first-name');
+const kmInput = document.getElementById('kilometers');
+const ageInput = document.getElementById('my-age');
 
 //PRENDO L ELEMENT0 DAL DOM DEL TOTALE
 const totalElement = document.getElementById('total');
 
+//PRENDO L ELEMENT0 DAL DOM NOME CHE POI STAMPERO'
+const yourName = document.getElementById('your-name');
+
 //PREPARO IL MESSAGGIO PER L'UTENTE
 const priceMessage = 'Il prezzo del suo biglietto è: € ';
+
+//PREPARO IL MESSAGGIO PER L'UTENTE
+const nameMessage = 'Nome e Cognome:';
 
 //PREPARO IL PREZZO PER CHILOMETRO
 const pricePerKm = 0.21;
@@ -13,10 +29,15 @@ const pricePerKm = 0.21;
 //PREPARO EVENTUALE SCONTO
 let discount = null;
 
-//RACCOGLIAMO LE INFORMAZIONI DALL'UTENTE
-const kms = parseInt(prompt('Quanti km devi percorrere?'));
-const age = parseInt(prompt('Quanti anni hai?'));
-console.log(kms, age);
+//RESTO IN ASCOLTO DI UN CLICK SU QUESTO BOTTONE
+button.addEventListener('click', function (){
+    //COLLEGO I DATI A QUELLI INSERITI DALL'UTENTE
+    const userName = nameInput.value;
+    console.log(userName);
+    const kms = kmInput.value;
+    console.log(kms);
+    const age = ageInput.value;
+    console.log(age);
 
 // VALIDAZIONE DEI DATI INSERITI
 if (isNaN(kms) || isNaN(age) || (age <=0) || (kms <=0)) {
@@ -27,6 +48,9 @@ else {
 //CALCOLO IL PREZZO
 const basePrice = pricePerKm * kms;
 console.log(basePrice);
+
+//INSERISCO LO SCONTO NELL'ELEMENTO IN PAGINA
+yourName.innerText = nameMessage + userName;
 
 //INSERISCO IL PREZZO NELL'ELEMENTO IN PAGINA
 totalElement.innerText = priceMessage + basePrice.toFixed(2);
@@ -65,3 +89,5 @@ totalElement.innerText = priceMessage + basePrice.toFixed(2);
 //AGGIUNGO IL PREZZO SCONTATO
 discountPriceElement.innerHTML = `Il prezzo scontato è: € ${finalPrice.toFixed(2)}`;
 }
+
+});
